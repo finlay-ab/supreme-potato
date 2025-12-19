@@ -245,7 +245,7 @@ try
 
     // animation
     auto last = Clock::now();
-    float angle = 0.f;
+    //float angle = 0.f;
 
     // Other initialization & loading
 	OGL_CHECKPOINT_ALWAYS();
@@ -417,6 +417,7 @@ try
             float horiz_mag = std::sqrt(vx * vx + vz * vz);
             float pitchAngle = std::atan2(horiz_mag, vy);
 
+
             // yaw
             float yawAngle = std::atan2(vx, vz);
 
@@ -493,7 +494,7 @@ try
 		// https://www.w3schools.com/c/c_conditions_short_hand.php
         int numberOfScreens = state.splitScreen ? 2 : 1;
 
-        auto submitStart = Clock::now();
+        //auto submitStart = Clock::now();
         for (int i = 0; i < numberOfScreens; ++i)
         {
             glUseProgram(prog.programId());
@@ -750,7 +751,7 @@ try
             if (i == 0) glQueryCounter(glQueries[4], GL_TIMESTAMP);
             #endif
         }
-        auto submitEnd = Clock::now();
+        //auto submitEnd = Clock::now();
         
         // clean
         glBindVertexArray(0);
